@@ -1,0 +1,27 @@
+1)Tener creados en Flowable los grupos administracion y docentes y asignarles los usuarios correspondientes: jefe_admin para las tareas administrativas de propuestas, archivo y revisión, jefe_docente para definir docente y armar informes, docente_2 y docente_3 para cuando se asignan docentes, y admin (con clave test) para las consultas y pruebas por API REST.
+
+2)Ir a nuestra carpeta flowable-persistente para trabajar con la infraestructura del motor.
+
+3)Levantar los contenedores con docker compose up -d para tener PostgreSQL y Flowable en ejecución.
+
+4)Comprobar con docker ps y psql que los servicios estén activos y que la base flowable responda correctamente.
+
+5)Ir a la ruta donde se tenga el proyecto de Eclipse descargado (tpGestion).
+
+6)Compilar y empaquetar el JAR con mvn package -DskipTests.
+
+7)Copiar el JAR generado a ~/flowable-persistente/ y reiniciar flowable-persistente para que cargue los listeners y delegates nuevos.
+
+8)Verificar que esté desplegada la definición actualizada de curso5 en Flowable.
+
+9)Levantar el backend de Spring Boot (tpGestion en el puerto 8081) para habilitar las pantallas y endpoints.
+
+10)Crear una solicitud para iniciar una instancia de curso5.
+
+11)Ejecutar PrepararMaterialesApp para reclamar y completar tareas de Preparar materiales con un usuario de administracion.
+
+12)Ejecutar simulador_comunicaciones.py para simular comunicaciones contra la API REST de Flowable.
+
+13)Ingresar a http://localhost:8081/portal-empresa.html con una empresa habilitada para verificar que muestre únicamente sus cursos.
+
+14)Abrir AnalisisEjecucionesApp y seleccionar Actualizar métricas para revisar los resultados y tiempos de las ejecuciones.

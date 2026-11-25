@@ -1,0 +1,17 @@
+1)Verificar que el grupo administracion exista en Flowable y tenga asignado al menos un usuario válido (por ejemplo jefe_admin) con credenciales activas.
+
+2)Ir a ~/flowable-persistente y asegurarse de que el contenedor de PostgreSQL esté levantado y accesible con postgres / password (ya que PrepararMaterialesApp inicializa un motor embebido contra la base directamente).
+
+3)Tener el proyecto tpGestion compilado y empaquetado (mvn package -DskipTests) con la clase com.grupo12.app.PrepararMaterialesApp incluida en el build/classpath.
+
+4)Asegurarse de que exista al menos una instancia activa de curso5 que haya avanzado hasta una tarea con clave Material (Preparar materiales) asignada al grupo candidato administracion o ya asignada al usuario.
+
+5)Ejecutar com.grupo12.app.PrepararMaterialesApp (desde el IDE o por consola con el classpath/JAR correspondiente).
+
+6)En la ventana superior, ingresar el Usuario y la Clave de un miembro del grupo administracion y hacer clic en Ingresar.
+
+7)Verificar en el panel central la lista de tareas de Preparar materiales (se muestran las ya asignadas al usuario y las disponibles sin asignar para administracion, se puede usar Actualizar tareas para refrescar).
+
+8)Si la tarea figura como DISPONIBLE PARA RECLAMAR, seleccionarla y pulsar Reclamar tarea para asignársela al usuario conectado.
+
+9)Una vez que la tarea quede asignada al usuario, seleccionarla y pulsar Completar tarea para finalizarla y hacer avanzar la instancia en el proceso.
